@@ -1,0 +1,49 @@
+/* Вага: 0,0,0,0,1 */
+h1 {
+  color: aqua;
+}
+
+/* Вага: 0,0,0,1,0 */
+.text-color {
+  color: aquamarine;
+}
+
+/* Вага: 0,0,1,0,0 */
+#main-title {
+  color: blue;
+}
+
+/* Вага: 0,0,0,1,0 */
+[data-type="alert"] {
+  color: blueviolet;
+}
+
+/* Вага: 0,0,0,0,2 */
+article p {
+  color: brown;
+}
+
+/* Вага: 0,0,0,0,2 */
+section p {
+  color: chartreuse;
+}
+
+/* Вага: 0,0,0,1,1 */
+p.highlight-text {
+  color: coral;
+}
+
+/* Вага: 0,0,0,2,1 */
+input.field[type="text"] {
+  color: crimson;
+}
+
+/* Вага: 0,0,1,1,0 */
+#content-block .inner-text {
+  color: deeppink;
+}
+
+/* Вага: 0,0,1,2,1 */
+#main-form > button.btn[type="submit"] {
+  color: indigo;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Specificity Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--
+  00000 *
+  00001 tag selector, pseudoelement
+  00010 class selector, pseudoclass selector, attribute selector
+  00100 id selector
+  01000 inline selector
+  -->
+  <div class="container">
+    <h1>Використовується для тегів h1, вага 1</h1>
+    <p class="text-color">Використовується для класу text-color, має вагу 10</p>
+    <p id="main-title">Використовується для елемента з id main-title, має вагу 100</p>
+    <p data-type="alert">Використовується для елементів з data-type="alert", вага 10</p>
+    
+    <article>
+      <h2>Заголовок статті</h2>
+      <p>Вкладений у тег article тег p, має вагу 0 0 0 0 2</p>
+    </article>
+    
+    <section>
+      <h2>Заголовок секції</h2>
+      <p>Застосовується для тегів p, вкладених у тег section на будь-якому рівні, вага 0 0 0 0 2</p>
+    </section>
+    
+    <p class="highlight-text">Для тегів p з класом highlight-text на першому рівні, вага 0 0 0 1 1</p>
+    
+    <p>
+      <input type="text" class="field" value="Застосовується до input з класом field та атрибутом type=text, вага 21">
+    </p>
+    
+    <div id="content-block">
+      <p class="inner-text">Використовується для елементів класу inner-text всередині id content-block, вага 00110</p>
+    </div>
+    
+    <form id="main-form">
+      <button class="btn" type="submit">Застосовується до button з класом btn та атрибутом type=submit, що є дочірнім для id main-form, вага 121</button>
+    </form>
+  </div>
+</body>
+
+</html>
