@@ -1,0 +1,231 @@
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  flex-grow: 1;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #007BFF;
+}
+
+.block-element {
+  background-color: #ffcccc;
+  border: 2px solid red;
+  margin-bottom: 10px;
+  padding: 10px;
+  /* Блоковий елемент займає всю ширину батьківського контейнера */
+}
+
+.inline-element {
+  background-color: #ccffcc;
+  border: 2px solid green;
+  padding: 5px;
+  /* Інлайновий елемент займає ширину лише свого вмісту, ігнорує вертикальні відступи */
+}
+
+.box {
+  display: inline;
+  color: red;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+  background-color: lightgray;
+}
+
+.box_block {
+  display: block;
+  color: blue;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+  background-color: lightgray;
+}
+
+.flex-container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.box_flex-item {
+  background-color: rgba(116, 206, 153, 0.702);
+  border: 1px solid black;
+  padding: 10px;
+  flex: 1;
+}
+
+.container-box {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.content-box {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid black;
+  background: #1aec17;
+  box-sizing: content-box;
+}
+
+.border-box {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid black;
+  background: #d23ead;
+  box-sizing: border-box;
+}
+.float-container {
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+
+}
+.float-element1 {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  float: left;
+  box-sizing: border-box;
+  background-color: #2d2da8;
+}
+.float-element2 {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  float: right;
+  box-sizing: border-box;
+  background-color: #a82d2d;
+}
+.clear {
+  clear: both;
+    width: 100px;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #51e395;
+}
+.box{
+  width: 250px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid black;
+  background: #58d97049;
+  display: inline-block;
+
+}
+p.box-content {
+ color: rgb(0, 0, 0);
+  font-size: 16px;
+  text-align: center;
+}
+h2.box-title {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  text-align: center;
+}
+h3.box-title {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  text-align: center;
+}
+.box-auto{
+overflow: auto;
+}
+.box-hidden{
+  overflow: hidden;
+}
+.box-visible{
+  overflow: visible;
+}
+.sticky-container{
+position: sticky;
+  top: 0;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #12220a;
+  background-color: #4bc5828b;
+}
+.text{
+height: 1000px;
+}
+.box2{
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid black;
+  background: #58d97049;
+  display: inline-block;
+  overflow: auto;
+}
+.fixed{
+  position: fixed;
+  top: 400px;
+  right: 20px;
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid black;
+  background: #58d97049;
+}
+.static{
+  position: static;
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid black;
+  background: #58d97049;
+}
+.relative{
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid black;
+  background: #58d97049;
+}
+.absolute{
+position: absolute;
+  top: 350px;
+  left: 20px;
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid black;
+  background: #58d97049;
+}
+.parent-absolute{
+position: relative;
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  border: 5px solid black;
+  background: #edefed49;
+}
