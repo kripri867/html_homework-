@@ -13,3 +13,7 @@
 #######task6.html — Експерименти з overflow.
 
 ########task7.html — Позиціонування елементів (static, relative, absolute, fixed, sticky).
+
+
+
+
