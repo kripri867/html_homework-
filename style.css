@@ -198,3 +198,42 @@ footer {
   font-style: normal;
   font-weight: 400;
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 50px;
+  }
+  
+  .section3__list {
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px; 
+  }
+
+  .section1__menu {
+    flex-direction: column; 
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  .main__heading {
+    font-size: 32px; 
+  }
+
+  .section2__heading {
+    font-size: 26px;
+  }
+
+  .section3__list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+}
