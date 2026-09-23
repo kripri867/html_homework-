@@ -17,8 +17,9 @@ body {
 }
 
 .section1 {
-  background-color: #34547A;
-  color: #FFFFFF;
+  background-color: #EEEFF1;
+  ;
+  color: #000000;
   padding-top: 50px;
   padding-bottom: 150px;
 }
@@ -27,11 +28,15 @@ body {
   display: flex;
   gap: 40px;
   margin-bottom: 125px;
+  padding-top:80px;
 }
-
+.active{
+  color: #34547A;
+  font-weight: 500;
+}
 .menu__item {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -54,11 +59,17 @@ body {
 
 .main__btn {
   display: inline-block;
-  background-color: #FFFFFF;
-  color: #34547A;
+  background-color: #34547A;
+  color: #FFF;
   font-weight: bold;
   padding: 15px 30px;
   cursor: pointer;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1.6px;
 }
 
 .section2 {
@@ -70,8 +81,26 @@ body {
 .section2__heading {
   font-size: 32px;
   font-weight: 500;
-  color: #34547A;
+  color: #000000;
   margin-bottom: 40px;
+  font-family: Roboto;
+}
+
+.list__item__text {
+  color: #FFF;
+  font-size: 21px;
+  font-weight: 500;
+
+}
+
+.list__item__text1 {
+  color: #FFF;
+
+
+  font-size: 16px;
+
+  font-weight: 400;
+
 }
 
 .section2__text {
@@ -105,16 +134,7 @@ body {
   flex-direction: column;
 }
 
-.list__item__block span:first-child {
-  font-size: 32px;
-  font-weight: bold;
-  color: #FFFFFF;
-}
 
-.list__item__block span:last-child {
-  font-size: 16px;
-  color: #FFFFFF;
-}
 
 .section4 {
   text-align: center;
@@ -178,4 +198,3 @@ footer {
   font-style: normal;
   font-weight: 400;
 }
-
