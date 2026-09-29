@@ -1,0 +1,232 @@
+$font-primary: 'Roboto', sans-serif;
+$color-primary: #34547A;
+$color-bg-light: #EEEFF1;
+$color-text-dark: #000000;
+$color-text-gray: #727272;
+$color-white: #FFF;
+
+$spacing: 5px;
+
+@mixin text($size: null, $weight: null, $family: null, $style: null, $ls: null) {
+  @if $size { font-size: $size; }
+  @if $weight { font-weight: $weight; }
+  @if $family { font-family: $family; }
+  @if $style { font-style: $style; }
+  @if $ls { letter-spacing: $ls; }
+}
+
+@mixin flex($jc: null, $ai: null, $dir: null, $wrap: null, $gap: null) {
+  display: flex;
+  @if $jc { justify-content: $jc; }
+  @if $ai { align-items: $ai; }
+  @if $dir { flex-direction: $dir; }
+  @if $wrap { flex-wrap: $wrap; }
+  @if $gap { gap: $gap; }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  @include text($family: $font-primary);
+}
+
+.container {
+  padding: 0 calc(80 * $spacing);
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 calc(10 * $spacing);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 calc(4 * $spacing);
+  }
+}
+
+.section1 {
+  background-color: $color-bg-light;
+  color: $color-text-dark;
+  padding-top: calc(10 * $spacing);
+  padding-bottom: calc(30 * $spacing);
+
+  &__menu {
+    @include flex($gap: calc(8 * $spacing));
+    margin-bottom: calc(25 * $spacing);
+    padding-top: calc(16 * $spacing);
+
+    @media screen and (max-width: 768px) {
+      @include flex($dir: column, $gap: calc(4 * $spacing));
+      margin-bottom: calc(12 * $spacing);
+    }
+  }
+}
+
+.active {
+  color: $color-primary;
+  @include text($weight: 500);
+}
+
+.menu__item {
+  @include text(16px, 400);
+  cursor: pointer;
+
+  &.active {
+    @include text($weight: bold);
+  }
+}
+
+.main {
+  &__heading {
+    @include text(48px, 500);
+    margin-bottom: calc(8 * $spacing);
+
+    @media screen and (max-width: 768px) {
+      @include text($size: 32px);
+    }
+  }
+
+  &__text {
+    @include text($size: 16px);
+    line-height: 26px;
+    max-width: 540px;
+    margin-bottom: calc(10 * $spacing);
+  }
+
+  &__btn {
+    display: inline-block;
+    background-color: $color-primary;
+    color: $color-white;
+    @include text(16px, 400, $font-primary, normal, 1.6px);
+    padding: calc(3 * $spacing) calc(6 * $spacing);
+    cursor: pointer;
+  }
+}
+
+.section2 {
+  text-align: center;
+  padding-top: calc(20 * $spacing);
+  padding-bottom: calc(20 * $spacing);
+
+  &__heading {
+    @include text(32px, 500, $font-primary);
+    color: $color-text-dark;
+    margin-bottom: calc(8 * $spacing);
+
+    @media screen and (max-width: 768px) {
+      @include text($size: 26px);
+    }
+  }
+
+  &__text {
+    @include text($size: 16px);
+    line-height: 26px;
+    color: $color-text-gray;
+    max-width: 730px;
+    margin: 0 auto;
+  }
+}
+
+.list {
+  &__item {
+    @include flex($ai: center, $gap: calc(4 * $spacing));
+
+    &__block {
+      @include flex($dir: column);
+    }
+
+    &__text {
+      color: $color-white;
+      @include text(21px, 500);
+    }
+
+    &__text1 {
+      color: $color-white;
+      @include text(16px, 400);
+    }
+  }
+}
+
+.section3 {
+  background-color: $color-primary;
+  padding-top: calc(20 * $spacing);
+  padding-bottom: calc(20 * $spacing);
+
+  &__list {
+    @include flex($jc: space-around, $ai: center);
+    padding: 0 calc(20 * $spacing);
+
+    @media screen and (max-width: 1024px) {
+      @include flex($jc: center, $wrap: wrap, $gap: calc(8 * $spacing));
+      padding: 0 calc(4 * $spacing);
+    }
+
+    @media screen and (max-width: 768px) {
+      @include flex($ai: flex-start, $dir: column);
+      padding: 0 calc(4 * $spacing);
+    }
+  }
+}
+
+.section4 {
+  text-align: center;
+  padding-top: calc(20 * $spacing);
+  padding-bottom: calc(20 * $spacing);
+
+  .section2__heading {
+    margin-bottom: calc(4 * $spacing);
+  }
+
+  .section2__text {
+    margin-bottom: calc(10 * $spacing);
+  }
+}
+
+.video {
+  &--container {
+    position: relative;
+    display: inline-block;
+    max-width: 1110px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &--item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
+
+footer {
+  background-color: $color-primary;
+  padding-top: calc(10 * $spacing);
+  padding-bottom: calc(10 * $spacing);
+}
+
+.section5 {
+  @include flex($jc: center, $ai: flex-start, $dir: column, $gap: calc(4 * $spacing));
+
+  &--text1 {
+    color: $color-white;
+    @include text(21px, 500, $font-primary);
+  }
+
+  &--text2 {
+    color: $color-white;
+    @include text(13px, 400, $font-primary, normal);
+  }
+}
