@@ -1,0 +1,24 @@
+@mixin text($size: null, $weight: null, $family: null, $style: null, $ls: null) {
+  @if $size { font-size: $size; }
+  @if $weight { font-weight: $weight; }
+  @if $family { font-family: $family; }
+  @if $style { font-style: $style; }
+  @if $ls { letter-spacing: $ls; }
+}
+
+@mixin flex($jc: null, $ai: null, $dir: null, $wrap: null, $gap: null) {
+  display: flex;
+  @if $jc { justify-content: $jc; }
+  @if $ai { align-items: $ai; }
+  @if $dir { flex-direction: $dir; }
+  @if $wrap { flex-wrap: $wrap; }
+  @if $gap { gap: $gap; }
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == tablet {
+    @media screen and (max-width: 1024px) { @content; }
+  } @else if $breakpoint == mobile {
+    @media screen and (max-width: 768px) { @content; }
+  }
+}

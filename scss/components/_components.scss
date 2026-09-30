@@ -1,0 +1,68 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
+.active {
+  color: v.$color-primary;
+  @include m.text($weight: 500);
+}
+
+.menu__item {
+  @include m.text(16px, 400);
+  cursor: pointer;
+
+  &.active {
+    @include m.text($weight: bold);
+  }
+}
+
+.main__btn {
+  display: inline-block;
+  background-color: v.$color-primary;
+  color: v.$color-white;
+  @include m.text(16px, 400, v.$font-primary, normal, 1.6px);
+  padding: calc(3 * v.$spacing) calc(6 * v.$spacing);
+  cursor: pointer;
+}
+
+.list {
+  &__item {
+    @include m.flex($ai: center, $gap: calc(4 * v.$spacing));
+
+    &__block {
+      @include m.flex($dir: column);
+    }
+
+    &__text {
+      color: v.$color-white;
+      @include m.text(21px, 500);
+    }
+
+    &__text1 {
+      color: v.$color-white;
+      @include m.text(16px, 400);
+    }
+  }
+}
+
+.video {
+  &--container {
+    position: relative;
+    display: inline-block;
+    max-width: 1110px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &--item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,117 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
+.section1 {
+  background-color: v.$color-bg-light;
+  color: v.$color-text-dark;
+  padding-top: calc(10 * v.$spacing);
+  padding-bottom: calc(30 * v.$spacing);
+
+  &__menu {
+    @include m.flex($gap: calc(8 * v.$spacing));
+    margin-bottom: calc(25 * v.$spacing);
+    padding-top: calc(16 * v.$spacing);
+
+    @include m.respond-to(mobile) {
+      @include m.flex($dir: column, $gap: calc(4 * v.$spacing));
+      margin-bottom: calc(12 * v.$spacing);
+    }
+  }
+}
+
+.main {
+  &__heading {
+    @include m.text(48px, 500);
+    margin-bottom: calc(8 * v.$spacing);
+
+    @include m.respond-to(mobile) {
+      @include m.text($size: 32px);
+    }
+  }
+
+  &__text {
+    @include m.text($size: 16px);
+    line-height: 26px;
+    max-width: 540px;
+    margin-bottom: calc(10 * v.$spacing);
+  }
+}
+
+.section2 {
+  text-align: center;
+  padding-top: calc(20 * v.$spacing);
+  padding-bottom: calc(20 * v.$spacing);
+
+  &__heading {
+    @include m.text(32px, 500, v.$font-primary);
+    color: v.$color-text-dark;
+    margin-bottom: calc(8 * v.$spacing);
+
+    @include m.respond-to(mobile) {
+      @include m.text($size: 26px);
+    }
+  }
+
+  &__text {
+    @include m.text($size: 16px);
+    line-height: 26px;
+    color: v.$color-text-gray;
+    max-width: 730px;
+    margin: 0 auto;
+  }
+}
+
+.section3 {
+  background-color: v.$color-primary;
+  padding-top: calc(20 * v.$spacing);
+  padding-bottom: calc(20 * v.$spacing);
+
+  &__list {
+    @include m.flex($jc: space-around, $ai: center);
+    padding: 0 calc(20 * v.$spacing);
+
+    @include m.respond-to(tablet) {
+      @include m.flex($jc: center, $wrap: wrap, $gap: calc(8 * v.$spacing));
+      padding: 0 calc(4 * v.$spacing);
+    }
+
+    @include m.respond-to(mobile) {
+      @include m.flex($ai: flex-start, $dir: column);
+      padding: 0 calc(4 * v.$spacing);
+    }
+  }
+}
+
+.section4 {
+  text-align: center;
+  padding-top: calc(20 * v.$spacing);
+  padding-bottom: calc(20 * v.$spacing);
+
+  .section2__heading {
+    margin-bottom: calc(4 * v.$spacing);
+  }
+
+  .section2__text {
+    margin-bottom: calc(10 * v.$spacing);
+  }
+}
+
+footer {
+  background-color: v.$color-primary;
+  padding-top: calc(10 * v.$spacing);
+  padding-bottom: calc(10 * v.$spacing);
+}
+
+.section5 {
+  @include m.flex($jc: center, $ai: flex-start, $dir: column, $gap: calc(4 * v.$spacing));
+
+  &--text1 {
+    color: v.$color-white;
+    @include m.text(21px, 500, v.$font-primary);
+  }
+
+  &--text2 {
+    color: v.$color-white;
+    @include m.text(13px, 400, v.$font-primary, normal);
+  }
+}
