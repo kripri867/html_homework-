@@ -1,54 +1,6 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f9f9f9;
-}
 
-svg {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-}
-.svg-square {
-    fill: #ff9999;
-    stroke: #d32f2f;
-    stroke-width: 5px;
-}
-
-.svg-rectangle {
-    fill: #99ccff;
-    stroke: #1976d2;
-    stroke-width: 5px;
-}
-
-.svg-circle {
-    fill: #c5e1a5;
-    stroke: #388e3c;
-    stroke-width: 5px;
-}
-
-.svg-ellipse {
-    fill: #fff59d;
-    stroke: #fbc02d;
-    stroke-width: 5px;
-}
-.animated-shape {
-    animation: colorTransition 5s infinite alternate ease-in-out;
-}
-
-@keyframes colorTransition {
-    0% {
-        fill: #fff59d;
-        stroke: #fbc02d;
-    }
-    50% {
-        fill: #c5e1a5;
-        stroke: #388e3c;
-    }
-    100% {
-        fill: #ce93d8;
-        stroke: #8e24aa;
-    }
+.custom-carousel img {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
 }
