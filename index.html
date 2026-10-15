@@ -6,176 +6,194 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Lato:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   <title>sosisochka</title>
-  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'roboto-slab': ['"Roboto Slab"', 'sans-serif'],
+            'lato': ['Lato', 'sans-serif'],
+            'lora': ['Lora', 'sans-serif'],
+            'quicksand': ['Quicksand', 'sans-serif'],
+          },
+          colors: {
+            'brand-green': '#1ED400',
+            'brand-dark': '#333333',
+            'brand-bg-black': '#000000D9',
+            'brand-light-green': '#1ED40066',
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
-<body>
+<body class="w-full m-0 p-0 box-border overflow-x-hidden font-quicksand text-brand-dark">
 
-  <div class="sector1 container">
-    <header class="menu">
-      <div class="all-menu">
-        <div class="name--contacts">
-          <h1 class="menu--name">LetsFly</h1>
-          <div class="menu-language">
-            <ul class="menu--contacts">
-              <li class="menu--contacts__item">Our Tours</li>
-              <li class="menu--contacts__item">Reviews</li>
-              <li class="menu--contacts__item">Travel Stories</li>
-              <li class="menu--contacts__item">Contacts</li>
-            </ul>
-            <div class="lang--switcher">
-              <img class="lang--switcher__picture" src="img/britain_image.png" alt="UK Flag">
-              <img class="lang--switcher__btm" src="img/bottom 1.svg" alt="button">
-            </div>
-          </div>
+  <div class="w-full bg-no-repeat bg-center bg-cover flex flex-col justify-between min-h-[964px]" 
+       style="background-image: url('img/derek-thomson-TWoL-QCZubY-unsplash%204.png');">
+    
+    <header class="w-full bg-brand-bg-black text-white px-4 md:px-12 py-6 flex flex-col xl:flex-row justify-around items-center gap-6">
+      <h1 class="font-bold text-3xl font-roboto-slab m-0">LetsFly</h1>
+      
+      <div class="flex flex-col sm:flex-row items-center gap-6 xl:gap-16">
+        <ul class="flex flex-wrap justify-center gap-4 sm:gap-10 m-0 p-0 list-none font-lato font-medium text-lg lg:text-xl">
+          <li class="cursor-pointer hover:text-brand-green transition-colors">Our Tours</li>
+          <li class="cursor-pointer hover:text-brand-green transition-colors">Reviews</li>
+          <li class="cursor-pointer hover:text-brand-green transition-colors">Travel Stories</li>
+          <li class="cursor-pointer hover:text-brand-green transition-colors">Contacts</li>
+        </ul>
+        <div class="flex gap-1 items-center cursor-pointer">
+          <img class="w-8 h-8" src="img/britain_image.png" alt="UK Flag">
+          <img src="img/bottom%201.svg" alt="button">
         </div>
-        <div class="menu--contacts__networks">
-          <img class="menu--contacts__pictures" src="img/twitter.svg" alt="twitter icon">
-          <img class="menu--contacts__pictures" src="img/facebook.svg" alt="facebook icon">
-          <img class="menu--contacts__pictures" src="img/vk.svg" alt="vk icon">
-          <img class="menu--contacts__pictures" src="img/youtube.svg" alt="youtube icon">
-        </div>
+      </div>
+
+      <div class="flex gap-8">
+        <img class="cursor-pointer w-6 lg:w-auto" src="img/twitter.svg" alt="twitter icon">
+        <img class="cursor-pointer w-6 lg:w-auto" src="img/facebook.svg" alt="facebook icon">
+        <img class="cursor-pointer w-6 lg:w-auto" src="img/vk.svg" alt="vk icon">
+        <img class="cursor-pointer w-6 lg:w-auto" src="img/youtube.svg" alt="youtube icon">
       </div>
     </header>
 
-    <div class="main--box">
-      <h2 class="main--box__text">IT'S TIME<br> TO BREAK FREE TO FRESH AIR</h2>
-      <p class="main--box__undertext">Holidays around the world that you deserve</p>
-      <p class="main--box__folder">ORDER TRIP</p>
+    <div class="w-[90%] max-w-[1200px] bg-brand-bg-black text-white mx-auto py-10 px-4 sm:px-10 rounded-lg text-center mt-12 shadow-lg">
+      <h2 class="m-0 mb-6 font-lora text-4xl sm:text-5xl lg:text-[84px] font-bold leading-tight">IT'S TIME<br> TO BREAK FREE TO FRESH AIR</h2>
+      <p class="m-0 mb-8 font-lato text-lg sm:text-2xl font-normal">Holidays around the world that you deserve</p>
+      <button class="font-lato font-black text-base sm:text-lg py-4 px-12 sm:px-24 bg-brand-green text-white cursor-pointer rounded hover:bg-green-600 transition-colors border-none">ORDER TRIP</button>
     </div>
 
-    <div class="main--plane">
-      <img class="plane" src="img/airplane 1.svg" alt="airplane icon">
+    <div class="w-full flex justify-center py-12">
+      <img class="w-16 h-auto" src="img/airplane%201.svg" alt="airplane icon">
     </div>
   </div>
 
-  <section class="sector2">
-    <div class="aboutus">
-      <h2 class="about--main">ABOUT US</h2>
-      <p class="about--main__second">
+  <section class="w-full bg-white py-16 lg:py-32 px-6">
+    <div class="max-w-[1100px] mx-auto text-center mb-20">
+      <h2 class="font-bold text-4xl md:text-[56px] font-roboto-slab mb-8 text-brand-dark">ABOUT US</h2>
+      <p class="font-medium text-lg md:text-xl font-quicksand leading-relaxed px-4 md:px-0">
         We orginize for you long-awaited rest in the most interested places of our planet. In far 2009 I and my wife
-        for<br>
-        the first time orginized trip for out friends. From that day it was becoming thing of our full life. Today we
-        have a<br>
-        27 high-qualified profeccionals and amount of out clients, which got help from us, right now bigger than 4000.
+        for the first time orginized trip for out friends. From that day it was becoming thing of our full life. Today we
+        have a 27 high-qualified profeccionals and amount of out clients, which got help from us, right now bigger than 4000.
       </p>
     </div>
 
-    <div class="stats-container">
-      <div class="stat-item">
-        <span class="p--green">4670</span>
-        <img class="stat-icon" src="img/journey 1.svg" alt="travellers">
-        <p class="stat-text">Travellers with us</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-[1450px] mx-auto">
+      <div class="flex flex-col items-center text-center">
+        <span class="font-roboto-slab font-bold text-7xl lg:text-[144px] text-brand-green leading-none mb-6">4670</span>
+        <img class="w-24 lg:w-[144px] h-auto mb-6" src="img/journey%201.svg" alt="travellers">
+        <p class="font-normal text-2xl lg:text-[32px] leading-tight m-0">Travellers with us</p>
       </div>
-      <div class="stat-item">
-        <span class="p--green">65%</span>
-        <img class="stat-icon" src="img/luggage 1.svg" alt="clients">
-        <p class="stat-text">Our clients<br> return to us</p>
+      <div class="flex flex-col items-center text-center">
+        <span class="font-roboto-slab font-bold text-7xl lg:text-[144px] text-brand-green leading-none mb-6">65%</span>
+        <img class="w-24 lg:w-[144px] h-auto mb-6" src="img/luggage%201.svg" alt="clients">
+        <p class="font-normal text-2xl lg:text-[32px] leading-tight m-0">Our clients<br> return to us</p>
       </div>
-      <div class="stat-item">
-        <span class="p--green">148</span>
-        <img class="stat-icon" src="img/world 1.svg" alt="location">
-        <p class="stat-text">Uncommon<br> location for travel</p>
+      <div class="flex flex-col items-center text-center">
+        <span class="font-roboto-slab font-bold text-7xl lg:text-[144px] text-brand-green leading-none mb-6">148</span>
+        <img class="w-24 lg:w-[144px] h-auto mb-6" src="img/world%201.svg" alt="location">
+        <p class="font-normal text-2xl lg:text-[32px] leading-tight m-0">Uncommon<br> location for travel</p>
       </div>
-      <div class="stat-item">
-        <span class="p--green">11</span>
-        <img class="stat-icon" src="img/love 1.svg" alt="emotions">
-        <p class="stat-text">Years we give<br> you new emotions</p>
+      <div class="flex flex-col items-center text-center">
+        <span class="font-roboto-slab font-bold text-7xl lg:text-[144px] text-brand-green leading-none mb-6">11</span>
+        <img class="w-24 lg:w-[144px] h-auto mb-6" src="img/love%201.svg" alt="emotions">
+        <p class="font-normal text-2xl lg:text-[32px] leading-tight m-0">Years we give<br> you new emotions</p>
       </div>
     </div>
   </section>
 
-  <section class="sector3">
-    <p class="sector3__subtitle">THE NEAREST TRIP</p>
-    <h2 class="sector3__title">BARCELONA</h2>
-    <p class="sector3__date">30.04.2020</p>
-    <p class="sector3__text">
-      I would definitely describe Barcelona as beautiful. Since the city is located between the<br> mountains and the
-      sea,
-      you have the option of going and having an amazing beach day or also<br> climbing up the mountains and going to
-      see
-      Barcelona from above. Wherever you go, there are<br> amazing views around the city. It’s just so beautiful!
+  <section class="w-full bg-no-repeat bg-center bg-cover flex flex-col items-center text-center py-20 lg:py-[120px] px-6"
+           style="background-image: url('img/second_background.jpg');">
+    <p class="font-roboto-slab font-bold text-2xl md:text-[56px] text-white tracking-[2px] mb-4">THE NEAREST TRIP</p>
+    <h2 class="font-roboto-slab font-bold text-[50px] sm:text-[80px] lg:text-[144px] text-white leading-none mb-4 w-full break-words">BARCELONA</h2>
+    <p class="font-medium text-xl md:text-2xl text-white mb-6">30.04.2020</p>
+    <p class="font-normal text-base md:text-lg text-white leading-relaxed max-w-[900px] mb-10 px-4 md:px-0">
+      I would definitely describe Barcelona as beautiful. Since the city is located between the mountains and the sea,
+      you have the option of going and having an amazing beach day or also climbing up the mountains and going to see
+      Barcelona from above. Wherever you go, there are amazing views around the city. It’s just so beautiful!
     </p>
-    <div class="sector3__line"></div>
-    <h3 class="sector3__discount">DISCOUNT 50% UNTIL 25 OF MARCH</h3>
-    <p class="sector3__button">ORDER A TRIP</p>
+    <div class="w-[200px] md:w-[300px] h-[3px] bg-white mb-8"></div>
+    <h3 class="font-medium text-xl md:text-[28px] text-white mb-8">DISCOUNT 50% UNTIL 25 OF MARCH</h3>
+    <button class="font-normal text-lg md:text-xl py-4 px-10 bg-brand-green text-white rounded cursor-pointer hover:bg-green-600 transition-colors border-none">ORDER A TRIP</button>
   </section>
 
-  <section class="sector4">
-    <h2 class="sector4__subtitle">
-      THE MOST POPULAR WAYS
-    </h2>
-    <div class="sector4__photo">
-      <div class="sector4__card">
-        <img src="img/dmitry-goykolov-X8Vo9rGVPS8-unsplash 1.png" alt="prague">
-        <span class="sector4__card--title">Beautiful Architecture of Prague</span>
+  <section class="w-full flex flex-col items-center py-20 px-6">
+    <h2 class="font-roboto-slab font-bold text-3xl md:text-[56px] text-center mb-12">THE MOST POPULAR WAYS</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1450px] mb-12">
+      <div class="relative w-full">
+        <img class="block w-full h-auto object-cover" src="img/dmitry-goykolov-X8Vo9rGVPS8-unsplash%201.png" alt="prague">
+        <span class="absolute top-2 left-0 font-roboto-slab text-sm md:text-lg text-white uppercase bg-black/70 py-1 px-2">Beautiful Architecture of Prague</span>
       </div>
-      <div class="sector4__card">
-        <img src="img/michelle-tsang-l0aeuaECCNA-unsplash 1.png" alt="omari">
-        <span class="sector4__card--title">Gastronomic Tour in Portugal</span>
+      <div class="relative w-full">
+        <img class="block w-full h-auto object-cover" src="img/michelle-tsang-l0aeuaECCNA-unsplash%201.png" alt="omari">
+        <span class="absolute top-2 left-0 font-roboto-slab text-sm md:text-lg text-white uppercase bg-black/70 py-1 px-2">Gastronomic Tour in Portugal</span>
       </div>
-      <div class="sector4__card">
-        <img src="img/christoph-schulz-wJ6xyh1YMxU-unsplash 1.png" alt="dubai">
-        <span class="sector4__card--title">Breathtaking Dubai</span>
+      <div class="relative w-full">
+        <img class="block w-full h-auto object-cover" src="img/christoph-schulz-wJ6xyh1YMxU-unsplash%201.png" alt="dubai">
+        <span class="absolute top-2 left-0 font-roboto-slab text-sm md:text-lg text-white uppercase bg-black/70 py-1 px-2">Breathtaking Dubai</span>
       </div>
     </div>
-    <p class="sector4__text">VIEW MORE</p>
-    <span class="sector4__media">or <br>in our instagram</span>
-    <img class="sector4__img" src="img/instagram 1.svg" alt="instagram icon">
+
+    <button class="py-4 px-12 bg-brand-green text-white rounded cursor-pointer text-lg md:text-xl font-bold mb-4 hover:bg-green-600 border-none transition-colors">VIEW MORE</button>
+    <span class="text-sm font-medium text-center mb-3 leading-relaxed">or <br>in our instagram</span>
+    <svg class="w-9 h-9 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+      <g clip-path="url(#clip0_32_26)">
+        <path d="M26.2551 0H9.74485C4.37145 0 0 4.37145 0 9.74485V26.2554C0 31.6285 4.37145 35.9999 9.74485 35.9999H26.2554C31.6285 35.9999 35.9999 31.6285 35.9999 26.2554V9.74485C35.9999 4.37145 31.6285 0 26.2551 0V0ZM33.8895 26.2554C33.8895 30.4648 30.4648 33.8895 26.2551 33.8895H9.74485C5.53518 33.8895 2.11047 30.4648 2.11047 26.2554V9.74485C2.11047 5.53518 5.53518 2.11047 9.74485 2.11047H26.2554C30.4648 2.11047 33.8895 5.53518 33.8895 9.74485V26.2554Z" fill="#333333"/>
+        <path d="M18 8.15649C12.5722 8.15649 8.15649 12.5722 8.15649 18C8.15649 23.4277 12.5722 27.8434 18 27.8434C23.4277 27.8434 27.8434 23.4277 27.8434 18C27.8434 12.5722 23.4277 8.15649 18 8.15649ZM18 25.7329C13.7362 25.7329 10.267 22.264 10.267 18C10.267 13.7362 13.7362 10.267 18 10.267C22.264 10.267 25.7329 13.7362 25.7329 18C25.7329 22.264 22.264 25.7329 18 25.7329Z" fill="#333333"/>
+        <path d="M28.0788 4.66064C26.4748 4.66064 25.1702 5.96554 25.1702 7.56927C25.1702 9.17327 26.4748 10.4782 28.0788 10.4782C29.6828 10.4782 30.9877 9.17327 30.9877 7.56927C30.9877 5.96527 29.6828 4.66064 28.0788 4.66064ZM28.0788 8.36742C27.6388 8.36742 27.2806 8.00927 27.2806 7.56927C27.2806 7.12899 27.6388 6.77111 28.0788 6.77111C28.5191 6.77111 28.8772 7.12899 28.8772 7.56927C28.8772 8.00927 28.5191 8.36742 28.0788 8.36742Z" fill="#333333"/>
+      </g>
+      <defs>
+        <clipPath id="clip0_32_26">
+          <rect width="36" height="36" fill="white"/>
+        </clipPath>
+      </defs>
+    </svg>
   </section>
 
-  <section class="sector5">
-    <h2 class="sector5__main">
-      TRAVEL STORIES
-    </h2>
-    <div class="sector4__photo">
-      <div class="sector5__card">
-        <img src="img/photo-1500108870510-66db24a39ee4 1.png" alt="thailand">
-        <span class="sector4__card--title">Incredible Thailand</span>
-        <img class="sector5__play" src="img/play-button (3) 2.svg" alt="play">
+  <section class="w-full bg-brand-light-green flex flex-col items-center py-20 px-6">
+    <h2 class="font-roboto-slab font-bold text-3xl md:text-[56px] text-center mb-12">TRAVEL STORIES</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1450px]">
+      <div class="relative w-full">
+        <img class="block w-full h-auto object-cover" src="img/photo-1500108870510-66db24a39ee4%201.png" alt="thailand">
+        <span class="absolute top-2 left-0 font-roboto-slab text-sm md:text-lg text-white uppercase bg-black/70 py-1 px-2">Incredible Thailand</span>
+        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 cursor-pointer hover:scale-110 transition-transform" src="img/play-button%20(3)%202.svg" alt="play">
       </div>
-      <div class="sector5__card">
-        <img src="img/artem-beliaikin-gBXX7odcoy0-unsplash 1.png" alt="baba na motike">
-        <span class="sector4__card--title">Our story for 90 seconds</span>
-        <img class="sector5__play" src="img/play-button (3) 2.svg" alt="play">
+      <div class="relative w-full">
+        <img class="block w-full h-auto object-cover" src="img/artem-beliaikin-gBXX7odcoy0-unsplash%201.png" alt="baba na motike">
+        <span class="absolute top-2 left-0 font-roboto-slab text-sm md:text-lg text-white uppercase bg-black/70 py-1 px-2">Our story for 90 seconds</span>
+        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 cursor-pointer hover:scale-110 transition-transform" src="img/play-button%20(3)%202.svg" alt="play">
       </div>
-      <div class="sector5__card">
-        <img src="img/v2osk-WNS__aBJjl4-unsplash 1.png" alt="Unexplored Aurora’s Light">
-        <span class="sector4__card--title">Unexplored Aurora’s Light</span>
-        <img class="sector5__play" src="img/play-button (3) 2.svg" alt="play">
+      <div class="relative w-full">
+        <img class="block w-full h-auto object-cover" src="img/v2osk-WNS__aBJjl4-unsplash%201.png" alt="Unexplored Aurora’s Light">
+        <span class="absolute top-2 left-0 font-roboto-slab text-sm md:text-lg text-white uppercase bg-black/70 py-1 px-2">Unexplored Aurora’s Light</span>
+        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 cursor-pointer hover:scale-110 transition-transform" src="img/play-button%20(3)%202.svg" alt="play">
       </div>
     </div>
   </section>
- <div class="sector6 container">
-    <footer class="menu2">
-      <div class="all-menu2">
-        <div class="name--contacts2">
-          <h1 class="menu--name2">LetsFly</h1>
-          <ul class="menu--contacts">
-            <li class="menu--contacts__item">Our Tours</li>
-            <li class="menu--contacts__item">Reviews</li>
-            <li class="menu--contacts__item">Travel Stories</li>
-            <li class="menu--contacts__item">Contacts</li>
-          </ul>
-        </div>
-        <div class="menu--contacts__networks">
-          <img class="menu--contacts__pictures2" src="img/1.svg" alt="twitter icon">
-          <img class="menu--contacts__pictures2" src="img/2.svg" alt="facebook icon">
-          <img class="menu--contacts__pictures2" src="img/3.svg" alt="vk icon">
-          <img class="menu--contacts__pictures2" src="img/4.svg" alt="youtube icon">
-        </div>
+
+  <div class="w-full bg-no-repeat bg-center bg-cover" style="background-image: url('img/imgMountains%201.png');">
+    <footer class="w-full px-4 md:px-12 py-12 flex flex-col xl:flex-row justify-around items-center gap-6">
+      <h1 class="font-bold text-3xl font-roboto-slab m-0 text-black">LetsFly</h1>
+      <ul class="flex flex-wrap justify-center gap-4 sm:gap-10 m-0 p-0 list-none font-lato font-medium text-lg md:text-xl">
+        <li class="cursor-pointer hover:text-brand-green transition-colors">Our Tours</li>
+        <li class="cursor-pointer hover:text-brand-green transition-colors">Reviews</li>
+        <li class="cursor-pointer hover:text-brand-green transition-colors">Travel Stories</li>
+        <li class="cursor-pointer hover:text-brand-green transition-colors">Contacts</li>
+      </ul>
+      <div class="flex gap-8">
+        <img class="cursor-pointer w-6 lg:w-auto" src="img/1.svg" alt="twitter icon">
+        <img class="cursor-pointer w-6 lg:w-auto" src="img/2.svg" alt="facebook icon">
+        <img class="cursor-pointer w-6 lg:w-auto" src="img/3.svg" alt="vk icon">
+        <img class="cursor-pointer w-6 lg:w-auto" src="img/4.svg" alt="youtube icon">
       </div>
     </footer>
   </div>
+
 </body>
 </html>
